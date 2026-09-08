@@ -76,7 +76,7 @@ public class Sistemas
         do
         {
             Console.WriteLine("Digite o nome do material:");
-            material.Nome = Console.ReadLine();
+            material.Nome = Console.ReadLine() ?? "";
             if (material.Nome == "")
             {
                 Console.WriteLine("Nome do material não pode ser vazio.");
@@ -84,7 +84,7 @@ public class Sistemas
             }
 
             Console.WriteLine("Digite a categoria do material:");
-            material.Categoria = Console.ReadLine();
+            material.Categoria = Console.ReadLine() ?? "";
             if (material.Categoria == "")
             {
                 Console.WriteLine("Categoria do material não pode ser vazio.");
@@ -164,9 +164,7 @@ public class Sistemas
         material.ExibirDados();
 
         Console.WriteLine();
-        Console.WriteLine("Deseja realmente excluir este material?");
-        Console.WriteLine("1 - Sim");
-        Console.WriteLine("2 - Não");
+        Console.WriteLine("Deseja realmente excluir este material?\n1 - Sim\n2 - Não");
         Console.Write("Digite uma opção: ");
 
         string resposta = Console.ReadLine() ?? "2";
@@ -238,9 +236,7 @@ public class Sistemas
         else
         {
             Console.WriteLine();
-            Console.WriteLine("Deseja confirmar a alteração?");
-            Console.WriteLine("1 - Sim");
-            Console.WriteLine("2 - Não");
+            Console.WriteLine("Deseja confirmar a alteração?\n1 - Sim\n2 - Não");
 
             string resposta = Console.ReadLine() ?? "2";
 
